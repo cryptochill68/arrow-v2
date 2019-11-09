@@ -1804,8 +1804,28 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
   // 174720 blocks/quarter
 
   if (nHeight > 232175) {
-     nSubsidy = 60 * COIN;
+     CAmount nSubsidy = 60 * COIN;
   }
+	
+  if (nHeight > 232225) {
+     CAmount nSubsidy = 50 * COIN;
+  }	
+	
+	if (nHeight > 232275) {
+     CAmount nSubsidy = 40 * COIN;
+  }	
+	
+	if (nHeight > 232325) {
+     CAmount nSubsidy = 30 * COIN;
+  }	
+	
+	if (nHeight > 232375) {
+     CAmount nSubsidy = 20 * COIN;
+  }	
+	
+if (nHeight > 232425) {
+     CAmount nSubsidy = 10 * COIN;
+  }		
 	
   // if (nHeight > 174720 * 2) {
   //  CAmount nSubsidy -= 5 * COIN;
