@@ -1799,7 +1799,8 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
   CAmount nSubsidy = 70 * COIN;
 
   if (nHeight > 232250) {
-   nSubsidy -= 5 * COIN;
+   nSubsidy -= 25 * COIN;
+	 return nSubsidy;
 	}
 
 	
@@ -1836,6 +1837,8 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 
   return nSubsidy;
 }
+		
+		
 
 bool IsInitialBlockDownload(const CChainParams& chainParams)
 {
