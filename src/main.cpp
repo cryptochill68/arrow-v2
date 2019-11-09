@@ -1798,13 +1798,9 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
   CAmount nSubsidy = 70 * COIN;
 
-  // Mining reward is reduced by 5 every quarter for the first 2 years.
-  // 1920 blocks/day
-  // 91 days/quarter
-  // 174720 blocks/quarter
-
   if (nHeight > 232250) {
    nSubsidy -= 5 * COIN;
+	}
 
 	
   // if (nHeight > 232250 * 2) {
